@@ -14,12 +14,13 @@
     width: 80%;
     overflow: hidden;
     margin: 0 auto;
+    padding: 50px 0px;
 }
 
 .about_box h2{
     font-size: 40px;
     font-weight: 700;
-    color: #292b4f;
+    color: #00acc1;
     margin-bottom: 30px;
 }
 .about_box h5{

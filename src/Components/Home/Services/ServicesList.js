@@ -1,15 +1,19 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import './ServiceList.css';
 
 const ServicesList = (props) => {
   const {imageURL, name, description, _id } = props.service;
   return (
-    <div>
-      <Card style={{ width: "19rem"}} className="product-card">
-        <Card.Img variant="top" src={imageURL} />
+    <div className="list_container">
+      <Card style={{ width: "19rem",border:'none'}} >
+        <div className="list-card">
+          <img src={imageURL} alt=""/>
+        </div>
+        {/* <Card.Img variant="top" src={imageURL} /> */}
         <Card.Body>
-          <Card.Title className="text-center">{name}</Card.Title>
+          <Card.Title style={{textAlign:"center",color:"tomato"}}>{name}</Card.Title>
           <Card.Text className="text-justify">
             {description}
           </Card.Text>

@@ -6,15 +6,16 @@ import {
 } from "react-router-dom";
 import './App.css';
 import AddService from './Components/Dashboard/Admin/AddService/AddService';
+import AppointmentList from './Components/Dashboard/Admin/AppointmentList/AppointmentList';
 import MakeAdmin from './Components/Dashboard/Admin/MakeAdmin/MakeAdmin';
 import ManageServices from './Components/Dashboard/Admin/ManageServices/ManageServices';
-import OrderList from './Components/Dashboard/Admin/OrderList/OrderList';
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 import Book from './Components/Dashboard/User/Book/Book';
 import BookList from './Components/Dashboard/User/BookList/BookList';
 import Review from './Components/Dashboard/User/Review/Review';
 import Home from './Components/Home/Home/Home';
 import Login from './Components/Login/Login';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute'
 
 export const UserContext = createContext();
 
@@ -30,31 +31,31 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/dashboard">
+          <PrivateRoute path="/dashboard">
             <Dashboard />
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/book/:id">
+          <PrivateRoute path="/book/:id">
             <Book />
-          </Route>
-          <Route path="/bookList">
+          </PrivateRoute>
+          <PrivateRoute path="/bookList">
             <BookList />
-          </Route>
-          <Route path="/review">
+          </PrivateRoute>
+          <PrivateRoute path="/review">
             <Review />
-          </Route>
-          <Route path="/orderList">
-            <OrderList />
-          </Route>
-          <Route path="/addService">
+          </PrivateRoute>
+          <PrivateRoute path="/appointmentList">
+            <AppointmentList />
+          </PrivateRoute>
+          <PrivateRoute path="/addService">
             <AddService />
-          </Route>
-          <Route path="/makeAdmin">
+          </PrivateRoute>
+          <PrivateRoute path="/makeAdmin">
             <MakeAdmin />
-          </Route>
-          <Route path="/manageServices">
+          </PrivateRoute>
+          <PrivateRoute path="/manageServices">
             <ManageServices />
-          </Route>
+          </PrivateRoute>
 
 
           <Route exact path="/">

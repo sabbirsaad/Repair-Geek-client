@@ -4,7 +4,7 @@ import logo from '../../../Images/logo.png';
 import { Link, NavLink } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCommentAlt, faPlus, faShoppingBag, faShoppingCart, faThList, faUserPlus } from '@fortawesome/free-solid-svg-icons'
+import { faCommentAlt, faPlus, faShoppingBag, faThList, faUserPlus,faChartLine } from '@fortawesome/free-solid-svg-icons'
 
 const Sidebar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -27,11 +27,13 @@ const Sidebar = () => {
             <Link to="/">
                 <img src={logo} alt=""/>
             </Link>
-            <NavLink to="/book"><FontAwesomeIcon icon={faShoppingCart} /> Book</NavLink>
-            <NavLink to="/bookList"><FontAwesomeIcon icon={faShoppingBag} /> Book List</NavLink>
-            <NavLink to="/review"><FontAwesomeIcon icon={faCommentAlt} /> Review</NavLink>
+            {
+                !admin && <div><NavLink to="/dashboard"><FontAwesomeIcon icon={faChartLine} /> Dashboard</NavLink>
+                <NavLink to="/bookList"><FontAwesomeIcon icon={faShoppingBag} /> Book List</NavLink>
+                <NavLink to="/review"><FontAwesomeIcon icon={faCommentAlt} /> Review</NavLink></div>
+            }
 
-            { admin && <div><NavLink to="/orderList"><FontAwesomeIcon icon={faShoppingBag} /> Order List</NavLink>
+            { admin && <div><NavLink to="/appointmentList"><FontAwesomeIcon icon={faShoppingBag} /> Appointment List</NavLink>
             <NavLink to="/addService"><FontAwesomeIcon icon={faPlus} /> Add Service</NavLink>
             <NavLink to="/makeAdmin"><FontAwesomeIcon icon={faUserPlus} /> Make Admin</NavLink>
             <NavLink to="/manageServices"><FontAwesomeIcon icon={faThList} /> Manage Services</NavLink></div>}

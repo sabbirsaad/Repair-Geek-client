@@ -1,0 +1,26 @@
+.list_container{
+    overflow: hidden;
+}
+.list-card{
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+.list-card img{
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    transform: scale(1);
+    transition: 0.8s;
+
+}
+.list_container img:hover{
+    transform: scale(1.5);
+}
+.list_container:hover{
+    border-radius: 5px;
+    background: #f3f1ef;
+    box-shadow:  5px 5px 10px #d8d6d5,
+             -5px -5px 10px #ffffff;
+    transition: 0.3s;
+}

@@ -1,0 +1,12 @@
+.features_container{
+    overflow: hidden;
+    border-radius: 6px;
+    background: #f3f1ef;
+    box-shadow:  5px 5px 10px #d8d6d5,
+                -5px -5px 10px #ffffff;
+}
+.features_container img{
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+}

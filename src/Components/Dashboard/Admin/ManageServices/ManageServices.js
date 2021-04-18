@@ -43,7 +43,7 @@ const ManageServices = () => {
                     <tbody>
                     <tr>
                         <td>{service.name}</td>
-                        <td>{service.price}</td>
+                        <td>${service.price}</td>
                         <td><span onClick={()=>handleDelete(service._id)} className="icon"><FontAwesomeIcon icon={faTrashAlt} /></span></td>
                     </tr>
                 </tbody>

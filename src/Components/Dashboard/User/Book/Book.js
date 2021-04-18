@@ -36,6 +36,7 @@ const Book = () => {
           description: booking.description,
           price: booking.price,
           date: new Date(),
+          status: "pending"
       };
       fetch('http://localhost:5000/addServiceAppoinment', {
             method: 'POST',

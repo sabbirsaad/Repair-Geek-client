@@ -16,7 +16,6 @@ const AddService = () => {
             price:data.price,
             imageURL: imageURL
           };
-          console.log(eventData);
           const url = `http://localhost:5000/addService`;
           fetch(url, {
             method: "POST",
@@ -62,7 +61,7 @@ const AddService = () => {
 
                   type="text"
                   className="form-input"
-                  placeholder="Enter Product Name"
+                  placeholder="Enter Service Name"
                   {...register('name',{required: true})}
                 />
                  {errors.name && (

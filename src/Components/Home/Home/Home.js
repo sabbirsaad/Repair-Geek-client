@@ -3,6 +3,8 @@ import Footer from '../../Shared/Footer/Footer';
 import Header from '../Header/Header';
 import Services from '../Services/Services';
 import WhyUs from '../WhyUs/WhyUs';
+import Testimonial from '../Testimonial/Testimonial';
+import Workshop from '../Workshop/Workshop';
 
 const Home = () => {
     return (
@@ -10,6 +12,8 @@ const Home = () => {
             <Header></Header>
             <Services></Services>
             <WhyUs></WhyUs>
+            <Workshop></Workshop>
+            <Testimonial></Testimonial>
             <Footer></Footer>
         </div>
     );

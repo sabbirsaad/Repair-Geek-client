@@ -14,12 +14,12 @@
     justify-content: center;
     min-height: 80vh;
     padding-top: 40px;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
 }
 .whyus_container h2{
     font-size: 40px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #292b4f;
+    color: #00acc1;
     padding-top:50px;
 }

@@ -9,7 +9,7 @@ const TopNavbar = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   return (
     <div style={{background:" #00acc1"}} className="fixed-top">
-      <Navbar collapseOnSelect expand="lg" className="navbar_main">
+      <Navbar collapseOnSelect expand="lg"  className="navbar_main">
         <Navbar.Brand as={Link} to="/"><img src={logo} alt=""/></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

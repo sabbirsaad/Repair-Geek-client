@@ -31,7 +31,7 @@ const MakeAdmin = () => {
              <Sidebar></Sidebar>
 
             <div class="content">
-            <h1 className="text-center">Make Admin</h1>
+            <h1 className="text-center mt-5 text-info">Make Admin</h1>
                         <br />
                         <form
                             onSubmit={handleSubmit(onSubmit)}
