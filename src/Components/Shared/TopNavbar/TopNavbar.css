@@ -1,0 +1,21 @@
+.navbar_main{
+    width: 80%;
+    margin: 0 auto;
+    height: 80px;
+}
+.navbar_main img{
+    width: 150px;
+    line-height: 80px;
+}
+.right_nav, .navbar_main a{
+    color:#dddddd !important;
+    margin-right: 15px;
+    transition: .3s;
+    font-weight: 600;
+}
+.right_nav a:hover{
+    border-radius: 5px;
+    background: #00acc1;
+    box-shadow:  2px 2px 5px #008fa0,
+                -2px -2px 5px #00c9e2;
+}

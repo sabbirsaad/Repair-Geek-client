@@ -1,0 +1,25 @@
+.whyus_container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.whyus_box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+    justify-content: center;
+    min-height: 80vh;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+.whyus_container h2{
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #292b4f;
+    padding-top:50px;
+}
