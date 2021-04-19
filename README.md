@@ -1,7 +1,7 @@
 # Repair Geek
 ### Features
 * Google Sign In
-*Conditional Admin & User panel
+* Conditional Admin & User panel
 * Admin can add services
 * Admin can delete services
 * services are store in database
