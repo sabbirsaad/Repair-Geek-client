@@ -1,3 +1,21 @@
+.payment_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.payment_container h2{
+  font-family: 'poppins';
+  font-size: 35px;
+  font-weight: 700;
+  color:#00acc1;
+  margin-bottom: 30px;
+}
+.payment_container form{
+  border: 1px solid lightblue;
+  padding: 20px 40px;
+}
 .DemoPickerWrapper {
     padding: 0 12px;
     font-family: "Source Code Pro", monospace;

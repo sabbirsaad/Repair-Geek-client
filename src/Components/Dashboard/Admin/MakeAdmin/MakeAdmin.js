@@ -14,7 +14,7 @@ const MakeAdmin = () => {
             email: data.email,
         };
 
-        fetch('http://localhost:5000/addAdmin', {
+        fetch('https://web-repair-geek.herokuapp.com/addAdmin', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',
@@ -31,7 +31,7 @@ const MakeAdmin = () => {
              <Sidebar></Sidebar>
 
             <div class="content">
-            <h1 className="text-center mt-5 text-info">Make Admin</h1>
+            <h1 style={{textAlign:'center',marginTop:'50px',color:'#00acc1',fontWeight:'700'}}>Make Admin</h1>
                         <br />
                         <form
                             onSubmit={handleSubmit(onSubmit)}

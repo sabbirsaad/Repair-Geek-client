@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from '../../Sidebar/Sidebar';
+import loading from '../../../../Images/loading.gif';
 
 const AppointmentList = () => {
     const [ appointments, setAppointments ] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/appointments')
+        fetch('https://web-repair-geek.herokuapp.com/appointments')
         .then(res => res.json())
         .then(data => setAppointments(data))
     },[appointments])
@@ -14,7 +15,7 @@ const AppointmentList = () => {
           status: event.target.value,
           _id,
       };
-      fetch(`http://localhost:5000/update/${_id}`, {
+      fetch(`https://web-repair-geek.herokuapp.com/update/${_id}`, {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(updateStatus),
@@ -30,7 +31,7 @@ const AppointmentList = () => {
 
         <div className="content content-box">
           <div className="container box-container">
-            <h2>Manage Services</h2>
+            <h2>Appointment List</h2>
             <br />
             <div className="container box-table">
             <table className="products-table">
@@ -66,6 +67,9 @@ const AppointmentList = () => {
                   )
               }
             </table>
+            {
+                  appointments.length === 0 && <div className="d-flex justify-content-center" style={{margin:'70px 0 50px 0',height:'70px'}}><img src={loading} alt=""/></div>
+              }
           </div>
           </div>
           </div>

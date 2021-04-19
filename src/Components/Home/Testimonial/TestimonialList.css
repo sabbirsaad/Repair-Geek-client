@@ -1,3 +1,8 @@
+.testimonialList_container{
+    background: #ffffff;
+    box-shadow:  5px 5px 10px #ebebeb,
+             -5px -5px 10px #ffffff;
+}
 .testimonial_card{
     text-align: center;
     padding-top: 20px;

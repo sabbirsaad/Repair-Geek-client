@@ -14,7 +14,7 @@ const Book = () => {
     const [appointment, setAppointment] =useState(null);
     
     useEffect(() => {
-        fetch(`http://localhost:5000/service/${id}`)
+        fetch(`https://web-repair-geek.herokuapp.com/service/${id}`)
             .then( (res) => res.json())
             .then( data => {
                 setBooking(data);
@@ -38,7 +38,7 @@ const Book = () => {
           date: new Date(),
           status: "pending"
       };
-      fetch('http://localhost:5000/addServiceAppoinment', {
+      fetch('https://web-repair-geek.herokuapp.com/addServiceAppoinment', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(serviceDetails),
@@ -108,7 +108,6 @@ const Book = () => {
             </div>
             <div style={{display:appointment? "block" :" none"}}>
               <div  className="d-flex flex-column justify-content-center">
-              <h1>Please Payment</h1>
                 <ProcessPayment handlePaymentSuccess={handlePaymentSuccess}></ProcessPayment>
               </div>
               

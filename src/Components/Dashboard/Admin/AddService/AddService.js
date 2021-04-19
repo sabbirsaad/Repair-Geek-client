@@ -16,7 +16,7 @@ const AddService = () => {
             price:data.price,
             imageURL: imageURL
           };
-          const url = `http://localhost:5000/addService`;
+          const url = `https://web-repair-geek.herokuapp.com/addService`;
           fetch(url, {
             method: "POST",
             headers: {
@@ -52,6 +52,7 @@ const AddService = () => {
              <Sidebar></Sidebar>
 
             <div className="content">
+              <h2>Add Service</h2>
             <form className="main-form" onSubmit={handleSubmit(onSubmit)}>
           <Container>
             <Row className="box">
@@ -75,9 +76,10 @@ const AddService = () => {
                   type="text"
                   className="form-input"
                   placeholder="Write a Description"
-                  {...register('description', { required: true })}
                   rows="4"
+                  {...register('description', { required: true })}
                 />
+                  
                  {errors.description && (
                                     <p className="text-danger">This field is required</p>
                                 )}
@@ -108,7 +110,7 @@ const AddService = () => {
               </Col>
 
               <Col md={12} className="d-flex justify-content-start mt-4">
-                <input type="submit" className="submit" value="Save" />
+                <input type="submit" className="btn-main" value="Save" />
               </Col>
             </Row>
           </Container>

@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
 import logo from '../../../Images/logo.png';
 import { Link, NavLink } from 'react-router-dom';
 import { UserContext } from '../../../App';
@@ -10,7 +9,7 @@ const Sidebar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [ admin, setAdmin ] = useState(false);
     useEffect(()=>{
-        fetch('http://localhost:5000/isAdmin', {
+        fetch('https://web-repair-geek.herokuapp.com/isAdmin', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',
@@ -28,7 +27,7 @@ const Sidebar = () => {
                 <img src={logo} alt=""/>
             </Link>
             {
-                !admin && <div><NavLink to="/dashboard"><FontAwesomeIcon icon={faChartLine} /> Dashboard</NavLink>
+                !admin && <div style={{display: !admin ? "block" : "none"}}><NavLink to="/dashboard"><FontAwesomeIcon icon={faChartLine} /> Dashboard</NavLink>
                 <NavLink to="/bookList"><FontAwesomeIcon icon={faShoppingBag} /> Book List</NavLink>
                 <NavLink to="/review"><FontAwesomeIcon icon={faCommentAlt} /> Review</NavLink></div>
             }

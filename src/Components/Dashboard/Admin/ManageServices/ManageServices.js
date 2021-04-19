@@ -3,17 +3,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt} from '@fortawesome/free-solid-svg-icons'
 import './ManageServices.css';
 import Sidebar from '../../Sidebar/Sidebar';
+import loading from '../../../../Images/loading.gif';
 
 const ManageServices = () => {
     const [ services, setServices ] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://web-repair-geek.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setServices(data))
     },[services])
 
     const handleDelete = id =>{
-        fetch(`http://localhost:5000/delete/${id}`,{
+        fetch(`https://web-repair-geek.herokuapp.com/delete/${id}`,{
           method: "DELETE"
         })
         .then(res => res.json())
@@ -29,6 +30,7 @@ const ManageServices = () => {
           <div className="container box-container">
             <h2>Manage Services</h2>
             <br />
+
             <div className="container box-table">
             <table className="products-table">
               <thead>
@@ -38,6 +40,7 @@ const ManageServices = () => {
                   <th>Action</th>
                 </tr>
               </thead>
+   
               {
                   services.map( service =>
                     <tbody>
@@ -50,6 +53,9 @@ const ManageServices = () => {
                   )
               }
             </table>
+            {
+                  services.length === 0 && <div className="d-flex justify-content-center" style={{margin:'70px 0 50px 0',height:'70px'}}><img src={loading} alt=""/></div>
+              }
           </div>
           </div>
           </div>

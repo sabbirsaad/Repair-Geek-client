@@ -67,7 +67,8 @@ const DemoPayment = ({handlePaymentSuccess}) => {
   };
 
   return (
-      <div>
+      <div className="payment_container">
+        <h2>Pay Now</h2>
     <form onSubmit={handleSubmit} className="payment_form">
       <label className="label">
         Card number
@@ -126,7 +127,7 @@ const DemoPayment = ({handlePaymentSuccess}) => {
       </label>
 
       <button className="payment_btn" type="submit" disabled={!stripe}>
-        Pay Now
+        Pay
       </button>
 
     </form>

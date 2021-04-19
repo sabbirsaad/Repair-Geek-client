@@ -15,13 +15,13 @@ const TestimonialList = (props) => {
 
   return (
     <div>
-      <Card style={{ width: "21rem" }}>
+      <Card style={{ width: "20rem" }} className="testimonialList_container">
         <div className="testimonial_card">
         <img src={photo} alt="" />
         </div>
         <Card.Body>
           <Card.Title className="text-center text-info">{serviceName}</Card.Title>
-          <Card.Text className="text-justify">{description}</Card.Text>
+          <Card.Text className="text-center">{description}</Card.Text>
           <Card.Footer
             style={{ border: "none", background: "none", textAlign: "center" }}
           >

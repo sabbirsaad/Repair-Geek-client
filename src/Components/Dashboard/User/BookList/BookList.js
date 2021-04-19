@@ -1,13 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../../../App';
 import Sidebar from '../../Sidebar/Sidebar';
+import loading from '../../../../Images/loading.gif';
 
 const BookList = () => {
     const [bookings, setbookings] = useState([]);
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
   useEffect(() => {
-    fetch("http://localhost:5000/bookings?email=" + loggedInUser.email)
+    fetch("https://web-repair-geek.herokuapp.com/bookings?email=" + loggedInUser.email)
       .then( res => res.json())
       .then( data => setbookings(data));
   }, [loggedInUser.email]);
@@ -45,6 +46,9 @@ const BookList = () => {
                   )
               }
             </table>
+            {
+                  bookings.length === 0 && <div className="d-flex justify-content-center" style={{margin:'70px 0 50px 0',height:'70px'}}><img src={loading} alt=""/></div>
+              }
           </div>
           </div>
           </div>

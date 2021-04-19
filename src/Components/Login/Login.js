@@ -1,11 +1,14 @@
 import React, { useContext, useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
 import { useHistory, useLocation } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { UserContext } from "../../App";
 import "./Login.css";
 import { handleGoogleSignIn, initializeLoginFramework } from "./LoginManager";
+import TopNavbar from "../Shared/TopNavbar/TopNavbar";
+import Footer from "../Shared/Footer/Footer";
+import login from '../../Images/login.jpg';
 
 const Login = () => {
     const [user, setUser] = useState({
@@ -33,8 +36,35 @@ const Login = () => {
   };
 
     return (
-        <div className="login-page">
-        <div className="container google-login col-md-4 col-lg-3 col-6">
+        <div>
+          <TopNavbar></TopNavbar>
+          <div className="login_container">
+            <div className="login_box ">
+              <Row className="d-flex justify-content-center flex-column-reverse flex-lg-row">
+                <Col lg={7}>
+                  <img src={login} alt=""/>
+                </Col>
+                <Col lg={5}>
+                  <div className="login_form">
+                    <h3>Login</h3>
+                      <div className="text-center">
+                      <Button
+                      onClick={googleSignIn}
+                      
+                      variant="outline-success"
+                      size="lg"
+                      >
+                        <FontAwesomeIcon icon={faGoogle} /> Sign in using Google
+                    </Button>
+                      </div>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          
+          </div>
+      <Footer></Footer>
+      {/* <div className="container google-login col-md-4 col-lg-3 col-6">
           <h2>User Login</h2>
           <Button
             onClick={googleSignIn}
@@ -44,8 +74,8 @@ const Login = () => {
           >
             <FontAwesomeIcon icon={faGoogle} /> Sign in using Google
           </Button>
+        </div> */}
         </div>
-      </div>
     );
 };
 

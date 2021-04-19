@@ -18,7 +18,7 @@ const Review = () => {
             description:data.description,
             date: new Date()
           };
-          const url = `http://localhost:5000/addReview`;
+          const url = `https://web-repair-geek.herokuapp.com/addReview`;
           fetch(url, {
             method: "POST",
             headers: {

@@ -1,9 +1,15 @@
 .main-form{
     display: flex;
-    padding-top: 80px;
     padding-bottom: 40px;
     justify-content:  center;
     align-items: center;
+}
+h2{
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px;
+    margin: 20px 0 20px 0;
+    color: #00acc1;
 }
 .main-form label{
     font-size: 16px;
@@ -15,7 +21,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
-    height: 45px;
+    min-height: 45px;
     padding-left: 15px;
     background-color: #fff;
     margin-bottom: 15px;

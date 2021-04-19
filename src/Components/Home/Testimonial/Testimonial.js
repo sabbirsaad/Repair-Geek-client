@@ -1,17 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import TestimonialList from './TestimonialList';
 import './Testimonial.css';
+import loading from '../../../Images/loading.gif';
 
 const Testimonial = () => {
     const [ reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://web-repair-geek.herokuapp.com/reviews')
         .then(res => res.json())
         .then(data => setReviews(data))
     },[reviews])
     return (
         <section className="testimonial_container">
               <h2>USER REVIEWS</h2>
+              {
+                  reviews.length === 0 && <div style={{marginTop:'100px'}}><img src={loading} alt=""/></div>
+              }
             <div className="testimonial_box">
               
                 {
