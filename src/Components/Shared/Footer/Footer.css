@@ -43,6 +43,9 @@
     margin-bottom: 20px;
     
 }
+.footer_box ul li{
+    margin-bottom: 10px;
+}
 .bottom_footer{
     display: flex;
     justify-content: center;

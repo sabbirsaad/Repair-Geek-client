@@ -34,8 +34,8 @@ const Review = () => {
         <div>
              <Sidebar></Sidebar>
 
-             <div className="content">
-            <form className="main-form" onSubmit={handleSubmit(onSubmit)}>
+             <div className="content">              
+            <form style={{paddingTop:'50px'}} className="main-form" onSubmit={handleSubmit(onSubmit)}>
           <Container>
             <Row className="box">
             <Col md={7}>

@@ -51,7 +51,7 @@ const AddService = () => {
         <div>
              <Sidebar></Sidebar>
 
-            <div className="content">
+            <div className="content content_details">
               <h2>Add Service</h2>
             <form className="main-form" onSubmit={handleSubmit(onSubmit)}>
           <Container>

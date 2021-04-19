@@ -11,6 +11,7 @@
     font-weight: 700;
     color: #00acc1;
     padding-top:50px;
+    text-transform: uppercase;
 }
 .workshop_box{
     display: flex;

@@ -15,9 +15,9 @@ const Footer = () => {
                         </div>
                         <p>Repair Geek offers professional PC repair services at our retail locations throughout country. The high level of customer service has allowed to open multiple full-service repair centers.</p>
                     </div>
-                    <div className="col-lg-3">
+                    <div className="col-lg-3 text-center">
                         <h4>Contact</h4>
-                        <div className="mt-5">
+                        <div className="mt-4">
                         <ul className="list-unstyled" style={{ fontSize: '16px',color: 'white',fontWeight:"500" }}>
                         <li>
                             <FontAwesomeIcon icon={faMapMarkerAlt} /> Mirpur, Dhaka, Bangladesh

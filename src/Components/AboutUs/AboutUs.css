@@ -1,0 +1,9 @@
+.aboutUs_container{
+    min-height: 80vh;
+}
+.aboutUs_container h2{
+    margin-top: 200px;
+    text-align: center;
+    font-weight: 700;
+    color: #00acc1;
+}

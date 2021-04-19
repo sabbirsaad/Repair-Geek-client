@@ -57,7 +57,7 @@ const Book = () => {
              <Sidebar></Sidebar>
 
             <div class="content">
-            <div style={{display: appointment ? "none" : "block"}} className="form_content container">
+            <div style={{display: appointment ? "none" : "block",paddingTop:'100px'}} className="form_content">
             <form className="main-form" onSubmit={handleSubmit(onSubmit)}>
             <Row className="box">
               <Col md={7}>
@@ -101,7 +101,7 @@ const Book = () => {
              </Col>
 
               <Col md={7} className="d-flex justify-content-start mt-4">
-                <input type="submit" className="submit" value="Submit" />
+                <input type="submit" className="btn-main" value="Submit" />
               </Col>
             </Row>
         </form>

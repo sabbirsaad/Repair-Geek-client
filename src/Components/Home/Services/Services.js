@@ -9,7 +9,7 @@ const Services = () => {
         fetch('https://web-repair-geek.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setServices(data))
-    },[])
+    },[services])
     return (
         <section className="services_container">
               <h2>OUR SERVICES</h2>

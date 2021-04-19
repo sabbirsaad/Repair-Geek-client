@@ -5,6 +5,8 @@ import {
   Route,
 } from "react-router-dom";
 import './App.css';
+import AboutUs from './Components/AboutUs/AboutUs';
+import ContactUs from './Components/ContactUs/ContactUs';
 import AddService from './Components/Dashboard/Admin/AddService/AddService';
 import AppointmentList from './Components/Dashboard/Admin/AppointmentList/AppointmentList';
 import MakeAdmin from './Components/Dashboard/Admin/MakeAdmin/MakeAdmin';
@@ -28,6 +30,13 @@ function App() {
         <Route path="/home">
             <Home />
           </Route>
+          <Route path="/about-us">
+            <AboutUs />
+          </Route>
+          <Route path="/contact-us">
+            <ContactUs />
+          </Route>
+          
           <Route path="/login">
             <Login />
           </Route>

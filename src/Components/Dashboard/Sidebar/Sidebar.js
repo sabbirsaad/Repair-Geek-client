@@ -26,8 +26,9 @@ const Sidebar = () => {
             <Link to="/">
                 <img src={logo} alt=""/>
             </Link>
+            <NavLink to="/dashboard"><FontAwesomeIcon icon={faChartLine} /> Dashboard</NavLink>
             {
-                !admin && <div style={{display: !admin ? "block" : "none"}}><NavLink to="/dashboard"><FontAwesomeIcon icon={faChartLine} /> Dashboard</NavLink>
+                !admin && <div style={{display: !admin ? "block" : "none"}}>
                 <NavLink to="/bookList"><FontAwesomeIcon icon={faShoppingBag} /> Book List</NavLink>
                 <NavLink to="/review"><FontAwesomeIcon icon={faCommentAlt} /> Review</NavLink></div>
             }

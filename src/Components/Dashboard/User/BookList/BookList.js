@@ -11,7 +11,7 @@ const BookList = () => {
     fetch("https://web-repair-geek.herokuapp.com/bookings?email=" + loggedInUser.email)
       .then( res => res.json())
       .then( data => setbookings(data));
-  }, [loggedInUser.email]);
+  }, [bookings]);
     return (
         <div>
              <Sidebar></Sidebar>
@@ -27,6 +27,7 @@ const BookList = () => {
                     <th>Name</th>
                     <th>Service Name</th>
                     <th>Price</th>
+                    <th>Date</th>
                     <th>Status</th>
                 </tr>
               </thead>
@@ -36,8 +37,8 @@ const BookList = () => {
                     <tr>
                         <td>{booking.name}</td>
                         <td>{booking.ServiceName}</td>
-                       
                         <td>${booking.price}</td>
+                        <td>{new Date(booking.date).toDateString()}</td>
                         <td>
                             {booking.status}
                         </td>

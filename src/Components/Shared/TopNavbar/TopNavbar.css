@@ -1,7 +1,8 @@
 .navbar_main{
     width: 80%;
     margin: 0 auto;
-    height: 80px;
+    min-height: 80px;
+    background: #00acc1;
 }
 .navbar_main img{
     width: 150px;

@@ -11,7 +11,7 @@ import { Carousel, Col, Row } from "react-bootstrap";
 const Workshop = () => {
   return (
     <div className="workshop_container">
-      <h2>Workshop collection</h2>
+      <h2>Workshop Collection</h2>
       <div className="workshop_box">
         <Carousel className="d-flex align-items-center">
           <Carousel.Item>

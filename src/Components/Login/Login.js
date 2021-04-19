@@ -64,17 +64,6 @@ const Login = () => {
           
           </div>
       <Footer></Footer>
-      {/* <div className="container google-login col-md-4 col-lg-3 col-6">
-          <h2>User Login</h2>
-          <Button
-            onClick={googleSignIn}
-            className="col-md-10"
-            variant="outline-success"
-            size="lg"
-          >
-            <FontAwesomeIcon icon={faGoogle} /> Sign in using Google
-          </Button>
-        </div> */}
         </div>
     );
 };

@@ -5,7 +5,7 @@ import './FeaturesList.css';
 const FeaturesList = ({data}) => {
   return (
     <div className="features_container">
-      <Card style={{ width: "29rem",border:'none' }}>
+      <Card style={{ width: "25rem",border:'none' }}>
         <Row>
         <Col md={4}>
          <img src={data.img} alt=""/>
